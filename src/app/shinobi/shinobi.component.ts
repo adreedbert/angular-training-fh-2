@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Shinobi } from '../shinobi';
 import { SHINOBI } from '../mock-shinobi';
+import { ShinobiService } from '../shinobi.service';
 
 @Component({
   selector: 'app-shinobi',
@@ -9,7 +10,8 @@ import { SHINOBI } from '../mock-shinobi';
 })
 export class ShinobiComponent implements OnInit {
 
-  shinobi = SHINOBI;
+  //shinobi = SHINOBI;
+  shinobi: Shinobi[];
 
   /*shinobi: Shinobi = {
     id: 1,
@@ -28,6 +30,11 @@ export class ShinobiComponent implements OnInit {
 
    onSelect(shinobi: Shinobi): void {
     this.selectedShinobi = shinobi;
+  }
+
+  getShinobi(): void{
+    this.shinobiService.getShinobi()
+      .subscribe(shinobi => this.shinobi = shinobi);
   }
 
 }
