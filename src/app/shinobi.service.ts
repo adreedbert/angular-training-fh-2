@@ -12,12 +12,11 @@ import { MessageService } from './message.service';
 )
 export class ShinobiService {
 
-  constructor(private messageService: MessageService) { 
+  constructor(private messageService: MessageService) { }
 
-    getShinobi(): Observable<Hero[]> {
+    getShinobi(): Observable<Shinobi[]> {
       this.messageService.add('ShinobiService: fetched shinobi');
       return of(SHINOBI);
     }
-  }
 
 }
