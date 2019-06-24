@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { Observable, of } from 'rxjs';
 
-import { Shinobi } from './shinobi'};
+import { Shinobi } from './shinobi';
 import { SHINOBI } from './mock-shinobi';
 import { MessageService } from './message.service';
 
@@ -13,7 +13,7 @@ import { MessageService } from './message.service';
 export class ShinobiService {
 
   constructor(private messageService: MessageService) { 
-    
+
   }
 
     getShinobi(): Observable<Shinobi[]> {
