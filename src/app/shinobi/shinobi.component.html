@@ -1,6 +1,6 @@
-<h2>{{shinobi.name}} :</h2>
+<!--h2>{{shinobi.name}} :</h2>
 <div><span>ID: </span>{{shinobi.id}}</div>
-<!--div><span>name: </span>{{hero.name}}</div-->
+<div><span>name: </span>{{hero.name}}</div>
 <div>
   <label>Name:
     <input [(ngModel)]="shinobi.name" placeholder="name"/>
@@ -11,4 +11,10 @@
   <label>Village:
     <input [(ngModel)]="shinobi.village" placeholder="village"/>
   </label>
-</div>
+</div!-->
+
+<ul class="shinobi">
+  <li *ngFor="let shinobi of shinobi" (click)="onSelect(shinobi)"> 
+    <span class="badge">{{shinobi.id}}</span> {{shinobi.name}} {{shinobi.village}}
+   </li>
+</ul>

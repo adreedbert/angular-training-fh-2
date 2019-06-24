@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Shinobi } from '..shinobi';
+import { Shinobi } from './shinobi';
+import { SHINOBI } from '../mock-shinobi';
 
 @Component({
   selector: 'app-shinobi',
@@ -8,13 +9,22 @@ import { Shinobi } from '..shinobi';
 })
 export class ShinobiComponent implements OnInit {
 
-  shinobi: Shinobi = {
+  shinobi = SHINOBI;
+
+  /*shinobi: Shinobi = {
     id: 1,
     name: 'Naruto',
     village: 'Konoha'
-  }; 
+  };*/ 
 
-  constructor() { }
+  selectedShinobi: Shinobi;
+  onSelect(shinobi: Shinobi): void {
+    this.selectedShinobi = shinobi;
+  }
+
+  constructor() {
+
+   }
 
   ngOnInit() {
   }
