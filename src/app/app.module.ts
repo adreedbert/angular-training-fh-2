@@ -19,7 +19,9 @@ import { MessagesComponent } from './messages/messages.component';
     ShinobiComponent, 
     ShinobiDetailComponent, MessagesComponent 
     ],
-    providers:[ShinobiService, MessageService],
+    providers:[
+      
+    ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
