@@ -8,7 +8,7 @@ import { Shinobi } from '..shinobi';
 })
 export class ShinobiComponent implements OnInit {
 
-  hero: Shinobi = {
+  shinobi: Shinobi = {
     id: 1,
     name: 'Naruto',
     village: 'Konoha'

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './heroes/heroes.component';
+import { ShinobiComponent } from './shinobi/shinobi.component';
 
 @NgModule({
   imports:      [ 
@@ -12,7 +12,7 @@ import { HeroesComponent } from './heroes/heroes.component';
     ],
   declarations: [ 
     AppComponent, 
-    HeroesComponent 
+    ShinobiComponent 
     ],
   bootstrap:    [ AppComponent ]
 })
