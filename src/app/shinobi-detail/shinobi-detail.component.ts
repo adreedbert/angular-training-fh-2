@@ -10,7 +10,9 @@ export class ShinobiDetailComponent implements OnInit {
 
   @Input() shinobi: Shinobi;
 
-  constructor() { }
+  constructor() { 
+    
+  }
 
   ngOnInit() {
   }
