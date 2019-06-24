@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Shinobi } from '../shinobi';
-import { SHINOBI } from '../mock-shinobi';
+//import { SHINOBI } from '../mock-shinobi';
 import { ShinobiService } from '../shinobi.service';
 
 @Component({
@@ -11,6 +11,8 @@ import { ShinobiService } from '../shinobi.service';
 export class ShinobiComponent implements OnInit {
 
   //shinobi = SHINOBI;
+  selectedShinobi: Shinobi;
+
   shinobi: Shinobi[];
 
   /*shinobi: Shinobi = {
@@ -18,14 +20,14 @@ export class ShinobiComponent implements OnInit {
     name: 'Naruto',
     village: 'Konoha'
   };*/ 
-  selectedShinobi: Shinobi;
  
 
-  constructor() {
+  constructor(private shinobiService: ShinobiService) {
 
    }
 
   ngOnInit() {
+    this.getShinobi();
   }
 
    onSelect(shinobi: Shinobi): void {
