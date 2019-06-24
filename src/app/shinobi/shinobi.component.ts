@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Shinobi } from './shinobi';
+import { Shinobi } from '../shinobi';
 import { SHINOBI } from '../mock-shinobi';
 
 @Component({
@@ -16,17 +16,18 @@ export class ShinobiComponent implements OnInit {
     name: 'Naruto',
     village: 'Konoha'
   };*/ 
-
   selectedShinobi: Shinobi;
-  onSelect(shinobi: Shinobi): void {
-    this.selectedShinobi = shinobi;
-  }
+ 
 
   constructor() {
 
    }
 
   ngOnInit() {
+  }
+
+   onSelect(shinobi: Shinobi): void {
+    this.selectedShinobi = shinobi;
   }
 
 }

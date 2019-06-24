@@ -13,13 +13,15 @@
   </label>
 </div!-->
 
-<!--ul class="shinobi">
+<ul class="shinobi">
   <li *ngFor="let shinobi of shinobi" (click)="onSelect(shinobi)"> 
     <span class="badge">{{shinobi.id}}</span> {{shinobi.name}} {{shinobi.village}}
    </li>
-</ul-->
+</ul>
 
-<h2>{{selectedShinobi.name | uppercase}} Details</h2>
+<div *ngIf="selectedShinobi">
+
+<h2>{{selectedShinobi.name}} Details</h2>
 <div><span>id: </span>{{selectedShinobi.id}}</div>
 <div>
   <label>Name:
@@ -28,6 +30,6 @@
 </div>
 <div>
     <label>Village:
-    <input [(ngModel)]="selectedVillage.name" placeholder="village"/>
+    <input [(ngModel)]="selectedShinobi.village" placeholder="village"/>
   </label>
 </div>
